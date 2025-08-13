@@ -1,0 +1,21 @@
+# POST http://localhost:3500/task/
+# Content-Type: application/json
+
+# {
+#     "name":"Play"
+# }
+
+# 689c83ead9086f1fefdce06d
+# GET http://localhost:3500/task/689c82fe283ac5f2b271cee2
+
+# GET http://localhost:3500/task/
+
+# DELETE  http://localhost:3500/task/689c83ead9086f1fefdce06d
+
+PUT http://localhost:3500/task/689c82fe283ac5f2b271cee2
+Content-Type: application/json
+
+{
+    "name":"Code MERN",
+    "checked":false
+}
