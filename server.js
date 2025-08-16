@@ -2,9 +2,10 @@ import express from "express";
 import taskRouter from "./routes/task.route.js";
 import cors from "cors";
 import { connectDB } from "./lib/db.js";
+import authRouter from "./routes/auth.route.js";
 
 const app = express();
-const PORT = 3500;
+const PORT = process.env.PORT;
 
 connectDB();
 
@@ -23,6 +24,8 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 app.use(cors());
+
+app.use("/", authRouter);
 
 app.use("/task", taskRouter);
 

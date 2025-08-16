@@ -10,6 +10,11 @@ const taskSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "Auth", // reference to the user model
+    required: true,
+  },
 });
 
 const Task = model("Task", taskSchema);

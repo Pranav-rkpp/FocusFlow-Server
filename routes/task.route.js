@@ -6,17 +6,18 @@ import {
   getTaskById,
   updateTaskById,
 } from "../controllers/task.controller.js";
+import { verifyToken } from "../controllers/auth.controller.js";
 const taskRouter = express.Router();
 
 // Tasks Route
-taskRouter.get("/", getAllTask);
+taskRouter.get("/",verifyToken, getAllTask);
 
 taskRouter.get("/:id", getTaskById);
 
-taskRouter.post("/", createTask);
+taskRouter.post("/",verifyToken, createTask);
 
-taskRouter.put("/:id", updateTaskById);
+taskRouter.put("/:id",verifyToken, updateTaskById);
 
-taskRouter.delete("/:id", deleteTaskById);
+taskRouter.delete("/:id",verifyToken, deleteTaskById);
 
 export default taskRouter;

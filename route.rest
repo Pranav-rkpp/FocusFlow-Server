@@ -12,10 +12,26 @@
 
 # DELETE  http://localhost:3500/task/689c83ead9086f1fefdce06d
 
-PUT http://localhost:3500/task/689c82fe283ac5f2b271cee2
+# PUT http://localhost:3500/task/689c82fe283ac5f2b271cee2
+# Content-Type: application/json
+
+# {
+#     "name":"Code MERN",
+#     "checked":false
+# }
+
+POST http://localhost:3500/login/
 Content-Type: application/json
 
 {
-    "name":"Code MERN",
-    "checked":false
+    "userName":"admin",
+    "password":"admin"
 }
+
+# POST http://localhost:3500/register
+# Content-Type: application/json
+
+# {
+#     "userName":"admin",
+#     "password":"admin"
+# }
